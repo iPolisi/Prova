@@ -1,0 +1,3 @@
+C:/Users/Cristian/CLionProjects/Prova/cmake-build-debug/CMakeFiles/Prova.dir
+C:/Users/Cristian/CLionProjects/Prova/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Cristian/CLionProjects/Prova/cmake-build-debug/CMakeFiles/rebuild_cache.dir
