@@ -24,17 +24,10 @@ void ContoCorrente::aggiungiTransazione(Transazione* t) {
 }
 //aggiornamento in positivo o in negativo del saldo in base al tipo di importo (entrata o uscita) con un if in linea
 
-void ContoCorrente::salvaSuFile() {
-    ofstream file(filePath, ios::app); //ofstream è un tipo di oggetto per scrivere dati su un file. "filepath" indica la directory.
-    // La modalità ios::app indica "append", quindi aggiunge una stringa al posto di sovrascrivere il contenuto
-    if (!file) {
-        cerr << "Errore nell'apertura del file!" << endl;
-        return;
-    }
+void ContoCorrente::salvaSuFile(ostream &file, const string &iban) const {
     for (const auto &t : transazioni) {
-        t->salvaSuFile(file, iban);
+        t->salvaSuFile(file, iban);  // Scrive la transazione nello stream passato
     }
-    //si scorrono le transazioni e per ogni transazione t si aggiunge il file di destinazione e l'iban associato al movimento
 }
 
 void ContoCorrente::caricaDaFile() {
@@ -80,3 +73,7 @@ void ContoCorrente::stampaTransazioni() const {
 }
 
 string ContoCorrente::getIban() const {return iban;};
+
+double ContoCorrente::getSaldo() const {
+    return saldo;
+}

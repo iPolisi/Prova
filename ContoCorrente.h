@@ -22,10 +22,11 @@ public:
     ~ContoCorrente();
 
     void aggiungiTransazione(Transazione* t);
-    void salvaSuFile();
+    void salvaSuFile(ostream &file, const string &iban) const;
     void caricaDaFile();
     void stampaTransazioni() const;
     string getIban() const;
+    double getSaldo() const;
 
 };
 
