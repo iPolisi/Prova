@@ -18,10 +18,10 @@ protected:
 
 public:
     Transazione(double imp, string desc);
-    virtual ~Transazione();
+    virtual ~Transazione() = default;
+    virtual string tipo() const;
 
-    virtual string tipo() const = 0;
-    virtual void salvaSuFile(ofstream &file, const string &iban) const;
+    void salvaSuFile(ostream &file, const string &iban) const;
 
     double getImporto() const;
     string getDescrizione() const;
