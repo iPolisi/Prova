@@ -1,0 +1,13 @@
+#Directory di build temporanee
+cmake-build-*/
+build/
+_deps/
+.cmake/
+Testing/
+
+#File di configurazione IDE
+.idea/
+
+# Esclude file di log, cache o temporanei
+*.log
+*.tmp
